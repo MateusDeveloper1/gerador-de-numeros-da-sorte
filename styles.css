@@ -47,12 +47,12 @@ body {
   outline: none;
 }
 
-#lucky-button:disabled{
+#lucky-button:disabled {
   background-color: #aec3b0;
 }
 
 #choice {
-  border: none;
+  border: 1px solid #ccc;
   outline: none;
   border-radius: 5px;
 }
@@ -61,4 +61,11 @@ body {
   margin-top: 10px;
   width: 270px;
   height: 130px;
+}
+
+@media (max-width: 768px) {
+  select {
+    font-size: 14px;
+    font-weight: 500;
+  }
 }
