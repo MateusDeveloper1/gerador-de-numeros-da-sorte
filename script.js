@@ -34,13 +34,15 @@ function numberLucky(quantity) {
   let arrayNumbers = [];
 
   while (arrayNumbers.length < count) {
-    result.innerHTML = "Sorteando..."
+    result.innerHTML = "Sorteando...";
     let randomNumber = luckyNumber(1, quantity);
 
     if (!arrayNumbers.includes(randomNumber)) {
       arrayNumbers.push(randomNumber);
     }
   }
+
+  arrayNumbers.sort((a, b) => a - b);
 
   result.innerHTML = arrayNumbers.join(" - ");
 }
