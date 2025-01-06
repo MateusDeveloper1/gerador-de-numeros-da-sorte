@@ -21,7 +21,7 @@ luckyButton.addEventListener("click", () => {
     numberLucky(60);
   }
 
-  if (count === 18) {
+  if (count === 15) {
     numberLucky(25);
   }
 
