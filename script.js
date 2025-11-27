@@ -15,22 +15,24 @@ selectChoice.addEventListener("change", (event) => {
 });
 
 luckyButton.addEventListener("click", () => {
-  count = parseInt(selectChoice.value, 10);
+  let count = parseInt(selectChoice.value, 10);
 
-  if (count === 6) {
-    numberLucky(60);
-  }
-
-  if (count === 15) {
-    numberLucky(25);
-  }
-
-  if (count === 50) {
-    numberLucky(100);
+  switch (count) {
+    case 6:
+      numberLucky(count, 60);
+      break;
+    case 15:
+      numberLucky(count, 25);
+      break;
+    case 50:
+      numberLucky(count, 100);
+      break;
+    default:
+      break;
   }
 });
 
-function numberLucky(quantity) {
+function numberLucky(count, quantity) {
   let arrayNumbers = [];
 
   while (arrayNumbers.length < count) {
@@ -44,7 +46,14 @@ function numberLucky(quantity) {
 
   arrayNumbers.sort((a, b) => a - b);
 
-  result.innerHTML = arrayNumbers.join(" - ");
+  let htmlContent = "";
+
+  arrayNumbers.forEach((number) => {
+    htmlContent += `<span class="circle">${number} </span>`;
+  });
+
+
+  result.innerHTML = htmlContent;
 }
 
 function luckyNumber(min, max) {
