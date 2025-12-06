@@ -24,8 +24,11 @@ luckyButton.addEventListener("click", () => {
     case 15:
       numberLucky(count, 25);
       break;
+    case 20:
+      numberLucky(count, 25)
+      break;
     case 50:
-      numberLucky(count, 100);
+      numberLucky(count, 99);
       break;
     default:
       break;
