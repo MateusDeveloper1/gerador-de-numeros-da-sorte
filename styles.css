@@ -64,6 +64,7 @@ i {
 
 #lucky-button:disabled {
   background-color: #aec3b0;
+  box-shadow: none;
 }
 
 #lucky-button:active {
@@ -81,10 +82,11 @@ i {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
+  justify-content: center;
   gap: 10px;
   margin-top: 20px;
   width: 100%;
-  height: 200px;
+  height: 300px;
 }
 
 .circle {
